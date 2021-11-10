@@ -106,3 +106,29 @@ body {
   .form__container {
     width: 550px;
   }
+
+  .form {
+    background-color: #1D263A;
+    color: #fff;
+    padding-top: 115px;
+    padding-bottom: 115px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form h1 {
+    font-size: 48px;
+  }
+
+  .form p {
+    font-size: 18px;
+    opacity: 0.65;
+  }
+
+  .form__group {
+    display: flex; /*элементы выстроятся по левому краю*/
+    flex-direction: column; /*меняем главную ось на вертикаль - элементы станут блочными и выстроятся друг под другом и растянутся по ширине*/
+    text-align: left; /*Выравниваем подписи по левому краю*/
+  }
