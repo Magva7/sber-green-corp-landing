@@ -1,39 +1,44 @@
+
+
 body {
     background-color: #6f9e80;
     margin: 0;
     font-family: sans-serif;
+  }
+  
+  div{
+      width: 100px;
+      height: 100px;
   
   }
   
-  .squares{
-      padding: 20px;
-      display: flex;
+  .box_1{
+      background-color: #1bb6ab;
+      height: 50%;
   }
   
-  
-  .squares div{
-      font-size: 50px;
-      padding: 10px;
+  .box_2{
+      background-color: #9c27b0;
+      width: 400px;
+      height: 400px;
   }
   
-  .sq_1{
-      background-color: #2980b9;
-      margin-right: 20px;
+  .box_3{
+      background-color: #ff9800;
+      height: 50vh;
+      width: 50vw;
   }
-  .sq_2{
-      background-color: #8e44ad;
-      margin: 20px 40px;
+  
+  .nested_2_1{
+      background-color: #795548;
+      width: 50%;
+      height: 50%;
   }
-  .sq_3{
-      background-color: #d35400;
-      margin: 30px;
-  }
-  .sq_4{
-      background-color: #f39c12;
-      margin-top: 40px;
-      margin-right: 20px;
-      margin-bottom: 30px;
-      margin-left: 40px;
+  
+  .nested_2_1_1{
+      background-color: #009688;
+      width: 50%;
+      height: 50%;
   }
   
   
