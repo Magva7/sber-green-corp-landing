@@ -63,6 +63,7 @@ body {
   button:hover{
     background-color: #f6980c;
     box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+    transition: background-color, color 0.3s ease-in; /*плавный переход*/
   }
 
   .about__image {
@@ -182,4 +183,22 @@ select {
 
 input {
   outline: none;
+}
+
+footer {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer__container {
+  display: flex;
+  align-content: center;
+}
+
+.footer__copyright {
+  padding-top: 40px;
+  text-align: center;
+  opacity: 0.5;
 }
