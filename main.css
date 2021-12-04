@@ -223,3 +223,21 @@ footer {
 .footer__links a {
   margin-bottom: 15px;
 }
+
+/*анимация для солнышка*/
+@keyframes rotation {
+  from{
+    transform: rotate(0deg); /*изначальное положение*/
+  }
+
+  to {
+    transform: rotate(720deg); /*положение, которое должно стать - т.е. поворот, чем больше тут число, тем быстрее крутится*/
+  }
+}
+
+.about__sun—image {
+  animation-name: rotation;
+  animation-duration: 10s; /*длительность анимации*/
+  animation-iteration-count: infinite; /*бесконечное количество повторений*/
+  animation-timing-function: linear; /*функция анимации, т.е. как быстро будут меняться стили у элементов*/
+}
