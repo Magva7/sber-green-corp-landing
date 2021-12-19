@@ -31,6 +31,8 @@ body {
     justify-content: space-between; /* первый элемент по левому краю, второй (это див) по правому*/
     align-items: center; /*выравниваем по вертикали по высоте логотипа*/
     padding: 20px; /*внутренний отступ в шапке*/
+    position: sticky;
+    top: 0;
   }
 
   .header__logo { /*логотип*/
