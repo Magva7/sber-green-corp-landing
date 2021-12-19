@@ -73,6 +73,7 @@ body {
   .about__sun—image {
     width: 100px;
     height: 100px;
+    position: absolute;
   }
 
   .about {
