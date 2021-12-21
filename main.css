@@ -245,3 +245,8 @@ footer {
   animation-iteration-count: infinite; /*бесконечное количество повторений*/
   animation-timing-function: linear; /*функция анимации, т.е. как быстро будут меняться стили у элементов*/
 }
+
+.animate__animated {
+  animation-duration: 2s; /*длительность анимации*/
+  animation-iteration-count: 1; /*1 повторение*/
+}
