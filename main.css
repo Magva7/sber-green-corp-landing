@@ -245,3 +245,23 @@ footer {
   animation-iteration-count: infinite; /*бесконечное количество повторений*/
   animation-timing-function: linear; /*функция анимации, т.е. как быстро будут меняться стили у элементов*/
 }
+
+@media (max-width: 720px) {
+  header, section, footer {
+    padding: 20px;
+  }
+
+  section h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .about__image {
+    width: 280px;
+  }
+
+  .about__sun—image {
+    width: 75px;
+    height: 75px;
+  }
+}
