@@ -265,3 +265,32 @@ footer {
     height: 75px;
   }
 }
+
+@media (max-width: 320px) {
+  header, section, footer {
+    padding: 10px;
+  }
+
+  .header__logo { /*логотип*/
+    height: 20px; /*Выставить высоту будет достаточно, ширина автоматически подстроится под высоту. */
+  }
+
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .about__image {
+    width: 280px;
+  }
+
+  .about__sun—image {
+    width: 75px;
+    height: 75px;
+  }
+}
