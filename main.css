@@ -258,14 +258,15 @@ footer {
     padding-bottom: 115px;
     padding-right: 60px;
     padding-left: 60px;
+}
 
+.cards{
     display: grid; /*чтобы выстроить карточки в столбцы*/
-    /*grid-template-columns: repeat(3, 300px); !*3 столбца по 300 пикселей*!*/
     grid-template-columns: 1fr 1fr 1fr; /*3 столбца*/
     grid-gap: 50px; /*расстояние между элементами*/
 }
 
-.cards{
+.card{
     padding-top: 35px;
     padding-right: 40px;
     padding-bottom: 25px;
@@ -274,7 +275,7 @@ footer {
     border-radius: 5px;
 }
 
-.cards p{
+.card p{
     font-size: 16px;
     line-height: 22px;
     opacity: 0.8;
@@ -289,7 +290,7 @@ footer {
     background-color: #eaeff9;
     border-radius: 50%; /*круглый*/
     display: flex; /*делаем флекс-контейнером контейнер, в котором лежат иконки из fontawesome и текст*/
-    flex-direction: column;
+    flex-direction: column; /*меняем направление главной оси, чтобы элементы выстроились друг под другом*/
     justify-content: space-evenly;/*выравнивание текста и элементов внутри контейнера посередине по вертикали */
     text-align: center; /*выравнивание текста и элементов внутри контейнера посередине по горизонтали */
 }
@@ -305,6 +306,73 @@ footer {
 #logo3{
     color: #22a030;
 }
+
+/*Серая линия*/
+.features__border{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #E6EAF4; /*это чтобы сделать блок линией*/
+}
+
+/*Второй блок с карточками*/
+
+.features__feedback{
+    display: flex; /*делаем флекс-контейнером*/
+}
+
+
+.features__feedback-left{
+     margin-right: 10px;
+ }
+
+.features__feedback-left h2{
+    font-size: 48px;
+}
+
+.features__feedback-left p{
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.features__feedback-right{
+    display: flex; /*делаем флекс-контейнером*/
+}
+
+.features__box{
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    color: white;
+    border-radius: 25px;
+}
+
+.features__box h3{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+/*
+ Тень должна на 6px отступать вниз, на 0px горизонтально и иметь
+  0 размытие. Также у левой карточки должен быть внешний отступ справа 30px.
+   В мобильной версии внешнего отступа справа быть не должно, но должен быть внешний отступ снизу 30px.*/
+.features__savings-box{
+    background-color: #dc5e26;
+    box-shadow: 0px 6px rgb(221 95 38 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
+    margin-right: 30px;
+}
+
+.features__rate-box{
+    background-color: #1D263A;
+    box-shadow: 0px 6px rgb(29 38 58 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
+}
+
+.fa-star{ /*цвет звезд*/
+    color: #ff7039;
+}
+
 /*Мобильная версия - данный медиа-запрос сделает отступы меньше, если размер экрана 600px или меньше в ширину.*/
 @media (max-width: 600px) {
     .features {
@@ -312,7 +380,38 @@ footer {
         padding-bottom: 50px;
         padding-right: 10px;
         padding-left: 10px;
+    }
 
+    .cards{
         grid-template-columns: auto; /*чтобы карточки выстраивались друг под другом*/
+    }
+
+    .features__feedback{
+        flex-direction: column; /*меняем направление главной оси*/
+    }
+
+    .features__feedback-left{
+        margin-right: 0px;
+    }
+
+    .features__feedback-left h2{
+        font-size: 36px;
+    }
+
+    .features__feedback-right{
+        flex-direction: column; /*меняем направление главной оси, чтобы элементы выстроились друг под другом*/
+        /*justify-content: space-evenly; надо убрать выравнивание по вертикали*/
+        /*justify-content: space-between; !*надо убрать выравнивание по вертикали*!*/
+        /*text-align: left; !*надо убрать выравнивание по вертикали*!*/
+        justify-content: flex-start;/*убираем выравнивание текста и элементов по вертикали */
+    }
+
+    .features__box h3{
+        font-size: 36px;
+    }
+
+    .features__savings-box{
+        margin-right: 0px;
+        margin-bottom: 30px;
     }
 }
