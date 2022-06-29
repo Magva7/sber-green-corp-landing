@@ -360,17 +360,93 @@ footer {
    В мобильной версии внешнего отступа справа быть не должно, но должен быть внешний отступ снизу 30px.*/
 .features__savings-box{
     background-color: #dc5e26;
-    box-shadow: 0px 6px rgb(221 95 38 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
+    box-shadow: 0 6px rgb(221 95 38 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
     margin-right: 30px;
 }
 
 .features__rate-box{
     background-color: #1D263A;
-    box-shadow: 0px 6px rgb(29 38 58 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
+    box-shadow: 0 6px rgb(29 38 58 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
 }
 
 .fa-star{ /*цвет звезд*/
     color: #ff7039;
+}
+
+/*Второй блок*/
+
+.promo__image{
+    width: 50%;
+    background: url('img/promo.jpg');
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 0;
+}
+
+.promo{
+    display: flex; /*делаем флекс-контейнером*/
+}
+
+.promo__right{
+    background-color: #dd5f26;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+.kartochka{
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.kartochka p{
+    opacity: 0.8;
+}
+
+/*.circle{*/
+/*    background: #ec6b29;*/
+/*    !*color: ;*!*/
+/*    !*!*border: 0.1875em solid #0F1C3F;*!*!*/
+/*    !*border-radius: 50%;*!*/
+/*    !*!*box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);*!*!*/
+/*    !*height: 10px;*!*/
+/*    !*width: 10px;*!*/
+
+/*}*/
+
+/*Круг*/
+.kartochka p:before {
+    content: ' \25CF'; /*символ круга в юникоде*/
+    font-size: 20px;
+    color: #ec6b29;
+    margin-right: 10px;
+}
+
+button{
+    background-color: #107b1c;
+    margin-top: 20px;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-weight: 600;
+    /* ,
+     Размер текста кнопки 18px, толщина 600.
+     У иконки внутри кнопки размер текста 15px, а также имеется внешний отступ слева 5px.*/
+}
+
+.fa-chevron-right{
+    font-size: 15px;
+    margin-right: 5px;
 }
 
 /*Мобильная версия - данный медиа-запрос сделает отступы меньше, если размер экрана 600px или меньше в ширину.*/
@@ -414,4 +490,23 @@ footer {
         margin-right: 0px;
         margin-bottom: 30px;
     }
+
+    .promo__image{
+        width: 100%;
+        height: 500px;
+    }
+
+    .promo{
+        grid-template-columns: auto; /*чтобы карточки выстраивались друг под другом*/
+        flex-direction: column-reverse; /*в обратном порядке*/
+    }
+
+    .promo__right{
+        background-color: #dd5f26;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
+
