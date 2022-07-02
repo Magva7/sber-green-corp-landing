@@ -273,6 +273,8 @@ footer {
     padding-left: 40px;
     border: 1px solid #D9E4E6;
     border-radius: 5px;
+    /*background: #FFFFFF;*/
+    /*background: red;*/ /*По ходу никак не влияет*/
 }
 
 .card p{
@@ -312,6 +314,7 @@ footer {
     margin-top: 50px;
     margin-bottom: 50px;
     border: 1px solid #E6EAF4; /*это чтобы сделать блок линией*/
+    /*width: 100%; !*Не обязательно*!*/
 }
 
 /*Второй блок с карточками*/
@@ -337,6 +340,7 @@ footer {
 
 .features__feedback-right{
     display: flex; /*делаем флекс-контейнером*/
+    align-items: center; /*Про это я забыл*/
 }
 
 .features__box{
@@ -354,19 +358,15 @@ footer {
     font-size: 48px;
 }
 
-/*
- Тень должна на 6px отступать вниз, на 0px горизонтально и иметь
-  0 размытие. Также у левой карточки должен быть внешний отступ справа 30px.
-   В мобильной версии внешнего отступа справа быть не должно, но должен быть внешний отступ снизу 30px.*/
 .features__savings-box{
     background-color: #dc5e26;
-    box-shadow: 0 6px rgb(221 95 38 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
+    box-shadow: 0 6px 0 rgb(221 95 38 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
     margin-right: 30px;
 }
 
 .features__rate-box{
     background-color: #1D263A;
-    box-shadow: 0 6px rgb(29 38 58 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
+    box-shadow: 0 6px 0 rgb(29 38 58 / 20%); /*тень - смещение по горизонтали 0, по вертикали на 6 вниз, цвет тени*/
 }
 
 .fa-star{ /*цвет звезд*/
@@ -374,6 +374,9 @@ footer {
 }
 
 /*Второй блок*/
+.promo{
+    display: flex; /*делаем флекс-контейнером*/
+}
 
 .promo__image{
     width: 50%;
@@ -383,9 +386,7 @@ footer {
     flex-shrink: 0;
 }
 
-.promo{
-    display: flex; /*делаем флекс-контейнером*/
-}
+
 
 .promo__right{
     background-color: #dd5f26;
@@ -411,15 +412,15 @@ footer {
     opacity: 0.8;
 }
 
-/*.circle{*/
-/*    background: #ec6b29;*/
-/*    !*color: ;*!*/
-/*    !*!*border: 0.1875em solid #0F1C3F;*!*!*/
-/*    !*border-radius: 50%;*!*/
-/*    !*!*box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);*!*!*/
-/*    !*height: 10px;*!*/
-/*    !*width: 10px;*!*/
-
+/*Вариант круга из мана Сбера*/
+/*.promo__text p::before {*/
+/*    content: '';*/
+/*    display: inline-block;*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*    border-radius: 50%;*/
+/*    background-color: #ec6b29;*/
+/*    margin-right: 10px;*/
 /*}*/
 
 /*Круг*/
@@ -439,9 +440,12 @@ button{
     padding-right: 30px;
     padding-left: 30px;
     font-weight: 600;
-    /* ,
-     Размер текста кнопки 18px, толщина 600.
-     У иконки внутри кнопки размер текста 15px, а также имеется внешний отступ слева 5px.*/
+    box-shadow: 0 16px 36px rgb(16 122 28 / 30%); /*Это я не указывал*/
+}
+
+#knopka_container {
+    display: flex;
+    justify-content: center;
 }
 
 .fa-chevron-right{
@@ -450,7 +454,7 @@ button{
 }
 
 /*Мобильная версия - данный медиа-запрос сделает отступы меньше, если размер экрана 600px или меньше в ширину.*/
-@media (max-width: 600px) {
+@media (max-width: 720px) { /*у меня было 600*/
     .features {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -467,7 +471,7 @@ button{
     }
 
     .features__feedback-left{
-        margin-right: 0px;
+        margin-right: 0;
     }
 
     .features__feedback-left h2{
@@ -476,10 +480,7 @@ button{
 
     .features__feedback-right{
         flex-direction: column; /*меняем направление главной оси, чтобы элементы выстроились друг под другом*/
-        /*justify-content: space-evenly; надо убрать выравнивание по вертикали*/
-        /*justify-content: space-between; !*надо убрать выравнивание по вертикали*!*/
-        /*text-align: left; !*надо убрать выравнивание по вертикали*!*/
-        justify-content: flex-start;/*убираем выравнивание текста и элементов по вертикали */
+        justify-content: initial;/*убираем выравнивание текста и элементов по вертикали */
     }
 
     .features__box h3{
@@ -487,7 +488,7 @@ button{
     }
 
     .features__savings-box{
-        margin-right: 0px;
+        margin-right: 0;
         margin-bottom: 30px;
     }
 
@@ -497,12 +498,11 @@ button{
     }
 
     .promo{
-        grid-template-columns: auto; /*чтобы карточки выстраивались друг под другом*/
+        /*grid-template-columns: auto; !*чтобы карточки выстраивались друг под другом*!*/ /*По ходу не обязательно*/
         flex-direction: column-reverse; /*в обратном порядке*/
     }
 
     .promo__right{
-        background-color: #dd5f26;
         padding-top: 50px;
         padding-bottom: 50px;
         padding-right: 10px;
